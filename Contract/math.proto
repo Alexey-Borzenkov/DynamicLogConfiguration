@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option csharp_namespace = "Example.Tools";
+
+package math;
+
+service Calculator {
+  rpc Power (PowerRequest) returns (PowerResponse);
+}
+
+message PowerRequest {
+  double x = 1;
+  double y = 2;
+}
+
+message PowerResponse {
+	double result = 1;
+}
+
